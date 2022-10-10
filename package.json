@@ -1,0 +1,34 @@
+{
+  "name": "vite-ts-lib-starter",
+  "version": "0.1.0",
+  "private": true,
+  "exports": {
+    ".": {
+      "require": "./dist/vite-ts-lib-starter.cjs",
+      "import": "./dist/vite-ts-lib-starter.mjs"
+    }
+  },
+  "main": "./dist/vite-ts-lib-starter.cjs",
+  "module": "./dist/vite-ts-lib-starter.mjs",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "tsc && vite build && dts-bundle-generator --config ./dts.config.ts",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint --cache .",
+    "lint:fix": "eslint --cache . --fix"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.27.0",
+    "@types/jsdom": "^20.0.0",
+    "@types/node": "^18.8.3",
+    "@vitest/coverage-c8": "^0.24.0",
+    "@vitest/ui": "^0.24.0",
+    "dts-bundle-generator": "^7.0.0",
+    "eslint": "^8.25.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4",
+    "vite": "^3.1.6"
+  }
+}
